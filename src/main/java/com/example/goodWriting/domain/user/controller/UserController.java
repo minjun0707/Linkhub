@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.goodWriting.common.ResponseDto;
+import com.example.goodWriting.common.CommonResponse;
 import com.example.goodWriting.domain.user.dto.UserLoginRequest;
 import com.example.goodWriting.domain.user.dto.UserSignUpRequest;
 import com.example.goodWriting.domain.user.service.UserService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -26,8 +27,8 @@ public class UserController {
 
 
 		return ResponseEntity.ok()
-			.body(ResponseDto.builder()
-				.path("/api/user/login")
+			.body(CommonResponse.builder()
+				.path("/api/user/test")
 				.method("POST")
 				.message("로그인 성공")
 				.statusCode(HttpStatus.OK)
@@ -35,12 +36,13 @@ public class UserController {
 	}
 
 	@PostMapping("/api/user/login")
-	public ResponseEntity login(@RequestBody UserLoginRequest userLoginRequest) {
+	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest) {
 
+		System.out.println("1");
 
 
 		return ResponseEntity.ok()
-			.body(ResponseDto.builder()
+			.body(CommonResponse.builder()
 				.path("/api/user/login")
 				.method("POST")
 				.message("로그인 성공")
@@ -57,7 +59,7 @@ public class UserController {
 
 
 		return ResponseEntity.ok()
-			.body(ResponseDto.builder()
+			.body(CommonResponse.builder()
 				.path("/api/user/signUp")
 				.method("POST")
 				.message("회원가입 성공")

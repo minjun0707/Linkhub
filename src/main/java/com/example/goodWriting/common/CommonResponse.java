@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 
 @Data
-public class ResponseDto<T> {
+public class CommonResponse<T> {
 	public String path;
 	public String method;
 	public T data;
@@ -14,7 +14,7 @@ public class ResponseDto<T> {
 	public HttpStatus statusCode;
 
 	@Builder
-	public ResponseDto(String path, String method, T data, String message, HttpStatus statusCode) {
+	public CommonResponse(String path, String method, T data, String message, HttpStatus statusCode) {
 		this.path = path;
 		this.method = method;
 		this.data = data;
@@ -23,7 +23,7 @@ public class ResponseDto<T> {
 	}
 
 	@Builder
-	public ResponseDto(String path, String method, String message, HttpStatus statusCode) {
+	public CommonResponse(String path, String method, String message, HttpStatus statusCode) {
 		this.path = path;
 		this.method = method;
 		this.message = message;

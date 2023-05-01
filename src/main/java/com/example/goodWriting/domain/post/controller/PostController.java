@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.goodWriting.common.ResponseDto;
+import com.example.goodWriting.common.CommonResponse;
 import com.example.goodWriting.domain.post.dto.PostCreateRequest;
+import com.example.goodWriting.domain.post.dto.PostTempCreateRequest;
+import com.example.goodWriting.domain.post.dto.PostTempCreateResponse;
 import com.example.goodWriting.domain.post.service.PostService;
 
 import lombok.RequiredArgsConstructor;
@@ -27,11 +29,33 @@ public class PostController {
 		// 잘못될시 리
 
 
-		postService.createBoard(PostCreateRequest);
+		postService.createPost(PostCreateRequest);
 
 
 		return ResponseEntity.ok()
-			.body(ResponseDto.builder()
+			.body(CommonResponse.builder()
+				.path("/api/board/create")
+				.method("POST")
+				.message("게시글 등록 성공")
+				.statusCode(HttpStatus.OK)
+				.build());
+	}
+
+
+	@PostMapping("/api/board/create/temp")
+	public ResponseEntity createTemp(@RequestBody PostTempCreateRequest PostTempCreateRequest) {
+
+		//url 유효성 검사
+
+
+		// 넘겨주기
+
+
+		postService.createTempPost(PostTempCreateRequest);
+
+
+		return ResponseEntity.ok()
+			.body(CommonResponse.builder()
 				.path("/api/board/create")
 				.method("POST")
 				.message("게시글 등록 성공")
