@@ -6,6 +6,5 @@ import lombok.AllArgsConstructor;
 public class MethodValidationErrorData {
 
 	public String field;
-	public String invalidValue;
 
 }

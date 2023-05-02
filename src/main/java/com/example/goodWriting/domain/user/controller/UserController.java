@@ -38,9 +38,6 @@ public class UserController {
 	@PostMapping("/api/user/login")
 	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest) {
 
-		System.out.println("1");
-
-
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()
 				.path("/api/user/login")

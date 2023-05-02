@@ -16,7 +16,6 @@ public class Crawler {
 	//한글이 추가 되지 않는 부분을 추가
 	private static final String URL_REGEX = "^(http|https)://[a-z0-9ㄱ-ㅎ가-힣]+([\\-\\.]{1}[a-z0-9ㄱ-ㅎ가-힣]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(/[a-zA-Z0-9ㄱ-ㅎ가-힣\\-\\._\\?,'/\\\\+&amp;%$#=~]*)?$";
 
-
 	public CrawledDataDTO getData(String inputUrl) {
 		String url = inputUrl;
 
@@ -35,49 +34,48 @@ public class Crawler {
 		String image = doc.select("meta[property=og:image]").attr("content");
 
 		//제목이 없는 경우
-		if(title.isEmpty()){
+		if (title.isEmpty()) {
 			title = "제목을 입력해주세요";
 		}
 
 		//내용이 없는 경우
-		if(description.isEmpty()){
+		if (description.isEmpty()) {
 			description = "간단한 설명을 입력해주세요";
 		}
 
 		//이미지가 없는 경우 첫번째 이미지
-		if(image.isEmpty()){
-			if(description.equals("")) {
-				Elements images = doc.select("img");
-				for (Element firstImage : images) {
-					String imageUrl = firstImage.attr("abs:src");
-					if (imageUrl != null && !imageUrl.isEmpty()) {
-						image = imageUrl;
-					}
+		if (image.isEmpty()) {
+			Elements images = doc.select("img");
+			for (Element firstImage : images) {
+				String imageUrl = firstImage.attr("abs:src");
+				if (imageUrl != null && !imageUrl.isEmpty()) {
+					image = imageUrl;
 				}
 			}
 		}
 
-		return new CrawledDataDTO(title,description,image);
+		//기본이미지
+		if (image.isEmpty()) {
+			image = "https://www.edology.com/build/images/logo-og.jpg";
+		}
 
-	}
-	public void getTitle() {
+		return new CrawledDataDTO(title, description, image);
 
 	}
 
 	public String addHttpsUrl(String url) {
 		url = url.trim();
 
-		if(url.startsWith("https://")){
+		if (url.startsWith("https://")) {
 			return url;
 		}
 
-		url = "https://"+ url;
+		url = "https://" + url;
 
 		return url;
 	}
 
-	public boolean isValidUrl(String url) {
-
+	public boolean isValidUrl(String url) throws IOException {
 
 		url = addHttpsUrl(url);
 
@@ -86,18 +84,9 @@ public class Crawler {
 			return false;
 		}
 
-
-		try {
-			if(isHttpResponseOk(url) == false) {
-				return false;
-			}
-		} catch (IOException e) {
+		if (isHttpResponseOk(url) == false) {
 			return false;
 		}
-
-
-
-
 
 		return true;
 
@@ -114,7 +103,7 @@ public class Crawler {
 		connection.connect();
 		int statusCode = connection.getResponseCode();
 
-		if(statusCode == 404){
+		if (statusCode == 404) {
 			System.out.println(statusCode);
 			return false;
 		}

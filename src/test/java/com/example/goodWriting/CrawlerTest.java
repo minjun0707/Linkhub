@@ -51,7 +51,7 @@ public class CrawlerTest {
 
 
 	@Test
-	void isValid_올바른URL() {
+	void isValid_올바른URL() throws IOException {
 
 		String validUrl = "https://jddng.tistory.com/safsdfs";
 
@@ -60,7 +60,7 @@ public class CrawlerTest {
 
 
 	@Test
-	void isValid_잘못된URL() {
+	void isValid_잘못된URL() throws IOException {
 
 		String validUrl = "https://jddng.tistory.com/safsdfs";
 

@@ -24,10 +24,7 @@ public class PostController {
 	public ResponseEntity create(@RequestBody PostCreateRequest PostCreateRequest) {
 
 		// 로그인 검증
-
-		// url 유효성 검증
-		// 잘못될시 리
-
+		// 로그인 실패 에러 던지기
 
 		postService.createPost(PostCreateRequest);
 
@@ -40,26 +37,31 @@ public class PostController {
 				.statusCode(HttpStatus.OK)
 				.build());
 	}
-
-
 	@PostMapping("/api/board/create/temp")
 	public ResponseEntity createTemp(@RequestBody PostTempCreateRequest PostTempCreateRequest) {
 
-		//url 유효성 검사
-
-
-		// 넘겨주기
-
-
-		postService.createTempPost(PostTempCreateRequest);
-
+		PostTempCreateResponse postTempCreateResponse = postService.createTempPost(PostTempCreateRequest);
 
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()
 				.path("/api/board/create")
 				.method("POST")
+				.data(postTempCreateResponse)
 				.message("게시글 등록 성공")
 				.statusCode(HttpStatus.OK)
 				.build());
 	}
+
+	@PostMapping("/api/board/test")
+	public ResponseEntity test(@RequestBody PostCreateRequest PostCreateRequest) {
+
+		return ResponseEntity.ok()
+			.body(CommonResponse.builder()
+				.path("/api/board/create")
+				.method("POST")
+				.message("test")
+				.statusCode(HttpStatus.OK)
+				.build());
+	}
+	
 }
