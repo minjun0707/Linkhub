@@ -28,6 +28,7 @@ public class CommonResponse<T> {
 		this.method = method;
 		this.message = message;
 		this.statusCode = statusCode;
+		this.data = (T)"";
 	}
 
 }

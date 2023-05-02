@@ -27,7 +27,6 @@ public class UserControllerAdviceTest {
 	UserController userController;
 	@Mock
 	UserService userService;
-
 	MockMvc mockMvc;
 	ObjectMapper objectMapper = new ObjectMapper();
 

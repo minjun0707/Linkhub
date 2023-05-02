@@ -20,46 +20,42 @@ import lombok.RequiredArgsConstructor;
 public class UserController {
 
 	private final UserService userService;
+	@PostMapping("/api/login")
+	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest) {
 
-	@GetMapping("/api/user/test")
+		return ResponseEntity.ok()
+			.body(CommonResponse.builder()
+				.path("/api/login")
+				.method("POST")
+				.message("로그인 성공")
+				.statusCode(HttpStatus.OK)
+				.build());
+	}
+
+	@PostMapping("/api/sign-up")
+	public ResponseEntity signUp(@RequestBody UserSignUpRequest UserSignUpRequest) {
+
+		//유효성 검사
+		userService.signUp(UserSignUpRequest);
+
+		return ResponseEntity.ok()
+			.body(CommonResponse.builder()
+				.path("/api/signUp")
+				.method("POST")
+				.message("회원가입 성공")
+				.statusCode(HttpStatus.OK)
+				.build());
+	}
+
+
+	@GetMapping("/api/test")
 	public ResponseEntity test() {
-
-
 
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()
 				.path("/api/user/test")
 				.method("POST")
 				.message("로그인 성공")
-				.statusCode(HttpStatus.OK)
-				.build());
-	}
-
-	@PostMapping("/api/user/login")
-	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest) {
-
-		return ResponseEntity.ok()
-			.body(CommonResponse.builder()
-				.path("/api/user/login")
-				.method("POST")
-				.message("로그인 성공")
-				.statusCode(HttpStatus.OK)
-				.build());
-	}
-
-	@PostMapping("/api/user/signUp")
-	public ResponseEntity signUp(@RequestBody UserSignUpRequest UserSignUpRequest) {
-
-		//유효성 검사
-
-		//회원가입 중복체크
-
-
-		return ResponseEntity.ok()
-			.body(CommonResponse.builder()
-				.path("/api/user/signUp")
-				.method("POST")
-				.message("회원가입 성공")
 				.statusCode(HttpStatus.OK)
 				.build());
 	}

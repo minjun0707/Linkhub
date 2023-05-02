@@ -63,5 +63,5 @@ public class PostController {
 				.statusCode(HttpStatus.OK)
 				.build());
 	}
-	
+
 }
