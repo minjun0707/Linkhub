@@ -20,9 +20,9 @@ public class LoginInterceptor implements HandlerInterceptor {
 		}
 
 		// 세션에서 로그인 정보 가져오기
-		User user = (User) session.getAttribute("user");
+		String email = (String) session.getAttribute("email");
 
-		if (user == null) {
+		if (email == null) {
 			throw new NotLoginException();
 		}
 

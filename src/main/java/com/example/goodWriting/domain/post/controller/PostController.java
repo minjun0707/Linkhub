@@ -1,14 +1,18 @@
 package com.example.goodWriting.domain.post.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.goodWriting.common.CommonResponse;
 import com.example.goodWriting.domain.post.dto.PostCreateRequest;
+import com.example.goodWriting.domain.post.dto.PostReadResponse;
 import com.example.goodWriting.domain.post.dto.PostTempCreateRequest;
 import com.example.goodWriting.domain.post.dto.PostTempCreateResponse;
 import com.example.goodWriting.domain.post.service.PostService;
@@ -29,9 +33,9 @@ public class PostController {
 	public ResponseEntity create(@RequestBody @ Valid PostCreateRequest PostCreateRequest, HttpServletRequest request) {
 
 		HttpSession session = request.getSession();
-		User user = (User)session.getAttribute("user");
+		String email = (String)session.getAttribute("email");
 
-		postService.createPost(user.getEmail(),PostCreateRequest);
+		postService.createPost(email,PostCreateRequest);
 
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()
@@ -56,6 +60,22 @@ public class PostController {
 				.statusCode(HttpStatus.OK)
 				.build());
 	}
+
+	@GetMapping("/api/board/read")
+	public ResponseEntity readBoard() {
+
+		PostReadResponse postReadResponse = postService.read();
+
+		return ResponseEntity.ok()
+			.body(CommonResponse.builder()
+				.path("/api/board/read")
+				.method("POST")
+				.data(postReadResponse)
+				.message("페이지 조회 성공")
+				.statusCode(HttpStatus.OK)
+				.build());
+	}
+
 
 	@PostMapping("/api/board/test")
 	public ResponseEntity test(@RequestBody PostCreateRequest PostCreateRequest) {

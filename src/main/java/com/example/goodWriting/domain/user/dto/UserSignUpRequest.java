@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserSignUpRequest {
 
-	@NotBlank(message = "아이디를 입력해주세요")
-	@Pattern(regexp = "^[a-zA-Z0-9]{4,12}$" , message = "아이디는 4~12자, 영어 숫자 조합으로 만들어주세요.")
+	@NotBlank(message = "이메일 입력해주세요")
+	@Pattern(regexp = "\"^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\\\w+\\\\.)+\\\\w+$\"" , message = "이메일을 올바르게 입력해주세요.")
 	private String email;
 	@NotBlank(message = "이름을 입력해주세요")
 	private String name;

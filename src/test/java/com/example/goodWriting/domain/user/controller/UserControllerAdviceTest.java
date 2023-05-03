@@ -84,4 +84,6 @@ public class UserControllerAdviceTest {
 		// .andExpect(jsonPath("$.message").value("아이디를 입력해주세요"))
 		// .andExpect(jsonPath("$.statusCode").value("BAD_REQUEST"));
 	}
+
+
 }

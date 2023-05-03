@@ -1,9 +1,10 @@
 package com.example.goodWriting.domain.post.service;
 
 import java.io.IOException;
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.goodWriting.domain.crawl.ConnectionTimeOutException;
 import com.example.goodWriting.domain.crawl.CrawledDataDTO;
@@ -11,6 +12,8 @@ import com.example.goodWriting.domain.crawl.Crawler;
 import com.example.goodWriting.domain.post.domain.Post;
 import com.example.goodWriting.domain.post.dto.PostCreateRequest;
 import com.example.goodWriting.domain.post.dto.PostCreateResponse;
+import com.example.goodWriting.domain.post.dto.PostReadResponse;
+import com.example.goodWriting.domain.post.dto.PostReadListData;
 import com.example.goodWriting.domain.post.dto.PostTempCreateRequest;
 import com.example.goodWriting.domain.post.dto.PostTempCreateResponse;
 import com.example.goodWriting.domain.post.exception.InvalidUrlException;
@@ -28,6 +31,8 @@ public class PostService {
 
 	private final PostRepository postRepository;
 	private final UserRepository userRepository;
+
+
 	public PostCreateResponse createPost(String email,PostCreateRequest postCreateRequest){
 
 		String url = postCreateRequest.getUrl();
@@ -76,5 +81,18 @@ public class PostService {
 		CrawledDataDTO data = crawler.getData(url);
 
 		return new PostTempCreateResponse(url,data.getTitle(), data.getDescription(), data.getImg());
+	}
+
+	@Transactional
+	public PostReadResponse read(){
+
+		List<Post> top9ByOrderByIdAsc = postRepository.findTop9ByOrderByIdAsc();
+		PostReadResponse postReadResponse = new PostReadResponse(top9ByOrderByIdAsc);
+		// List<PostReadResponse> responseList = new ArrayList<>();
+		// for (Post post : top9ByOrderByIdAsc) {
+		// 	responseList.add(new PostReadResponse(post));
+		// }
+
+		return postReadResponse;
 	}
 }

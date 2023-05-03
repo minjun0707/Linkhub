@@ -33,7 +33,7 @@ public class UserController {
 
 		//세션 생성 후 저장
 		HttpSession session = request.getSession();
-		session.setAttribute("user", user);
+		session.setAttribute("email", user.getEmail());
 
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()
@@ -51,7 +51,7 @@ public class UserController {
 		User user = userService.signUp(userSignUpRequest);
 
 		HttpSession session = request.getSession();
-		session.setAttribute("user",user);
+		session.setAttribute("email",user.getEmail());
 
 
 
