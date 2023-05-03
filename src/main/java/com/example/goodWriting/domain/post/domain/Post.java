@@ -23,7 +23,7 @@ public class Post extends EntityDate {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "post_id")
-	private int id;
+	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id")
@@ -34,7 +34,11 @@ public class Post extends EntityDate {
 	private String title;
 	private String description;
 
-
-
-
+	public Post(User user, String url, String img, String title, String description) {
+		this.user = user;
+		this.url = url;
+		this.img = img;
+		this.title = title;
+		this.description = description;
+	}
 }

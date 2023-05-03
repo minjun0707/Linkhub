@@ -23,7 +23,6 @@ public class User extends EntityDate {
 	private Long id;
 
 	private String name;
-
 	private String email;
 	private String password;
 

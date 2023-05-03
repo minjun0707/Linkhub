@@ -8,10 +8,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.goodWriting.common.CommonResponse;
+import com.example.goodWriting.domain.user.domain.User;
 import com.example.goodWriting.domain.user.dto.UserLoginRequest;
 import com.example.goodWriting.domain.user.dto.UserSignUpRequest;
 import com.example.goodWriting.domain.user.service.UserService;
 
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
@@ -21,7 +26,14 @@ public class UserController {
 
 	private final UserService userService;
 	@PostMapping("/api/login")
-	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest) {
+	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest, HttpServletRequest request
+		) {
+
+		User user = userService.login(userLoginRequest);
+
+		//세션 생성 후 저장
+		HttpSession session = request.getSession();
+		session.setAttribute("user", user);
 
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()
@@ -33,10 +45,15 @@ public class UserController {
 	}
 
 	@PostMapping("/api/sign-up")
-	public ResponseEntity signUp(@RequestBody UserSignUpRequest UserSignUpRequest) {
+	public ResponseEntity signUp(@RequestBody @Valid UserSignUpRequest userSignUpRequest,HttpServletRequest request) {
 
 		//유효성 검사
-		userService.signUp(UserSignUpRequest);
+		User user = userService.signUp(userSignUpRequest);
+
+		HttpSession session = request.getSession();
+		session.setAttribute("user",user);
+
+
 
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()

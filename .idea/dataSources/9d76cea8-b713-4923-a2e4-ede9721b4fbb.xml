@@ -1036,9 +1036,9 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="299" parent="297" name="id">
+    <column id="299" parent="297" name="post_id">
       <AutoIncrement>1</AutoIncrement>
-      <DataType>int|0s</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
@@ -1076,7 +1076,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <RefTableName>user</RefTableName>
     </foreign-key>
     <index id="308" parent="297" name="PRIMARY">
-      <ColNames>id</ColNames>
+      <ColNames>post_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -1090,7 +1090,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="311" parent="298" name="user_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1103,15 +1103,15 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>datetime(6)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="314" parent="298" name="name">
+    <column id="314" parent="298" name="email">
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="315" parent="298" name="password">
+    <column id="315" parent="298" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="316" parent="298" name="id">
+    <column id="316" parent="298" name="password">
       <DataType>varchar(255)|0s</DataType>
       <Position>6</Position>
     </column>
