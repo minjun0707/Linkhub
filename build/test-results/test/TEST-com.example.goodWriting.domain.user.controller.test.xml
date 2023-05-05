@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.goodWriting.domain.user.controller.test" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-05T12:25:48" hostname="gimminjun-ui-MacBookAir.local" time="0.007">
+  <properties/>
+  <testcase name="test()" classname="com.example.goodWriting.domain.user.controller.test" time="0.007"/>
+  <system-out><![CDATA[89
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

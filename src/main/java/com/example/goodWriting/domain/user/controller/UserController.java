@@ -19,15 +19,20 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequiredArgsConstructor
+@Slf4j
 public class UserController {
 
 	private final UserService userService;
 	@PostMapping("/api/login")
 	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest, HttpServletRequest request
 		) {
+
+		log.info(userLoginRequest.getEmail());
+		log.info(userLoginRequest.getPassword());
 
 		User user = userService.login(userLoginRequest);
 
@@ -47,7 +52,6 @@ public class UserController {
 	@PostMapping("/api/sign-up")
 	public ResponseEntity signUp(@RequestBody @Valid UserSignUpRequest userSignUpRequest,HttpServletRequest request) {
 
-		//유효성 검사
 		User user = userService.signUp(userSignUpRequest);
 
 		HttpSession session = request.getSession();
@@ -60,6 +64,23 @@ public class UserController {
 				.path("/api/signUp")
 				.method("POST")
 				.message("회원가입 성공")
+				.statusCode(HttpStatus.OK)
+				.build());
+	}
+
+	@GetMapping("/api/logout")
+	public ResponseEntity logout(HttpServletRequest request) {
+
+		log.info("logout");
+
+		HttpSession session = request.getSession();
+		session.invalidate();
+
+		return ResponseEntity.ok()
+			.body(CommonResponse.builder()
+				.path("/api/logout")
+				.method("GET")
+				.message("로그아웃 성공")
 				.statusCode(HttpStatus.OK)
 				.build());
 	}

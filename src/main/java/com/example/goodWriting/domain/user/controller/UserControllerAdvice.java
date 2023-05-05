@@ -12,13 +12,17 @@ import com.example.goodWriting.domain.user.exception.UserEmailAlreadyException;
 import com.example.goodWriting.domain.user.exception.UserErrorCode;
 
 import jakarta.servlet.http.HttpServletRequest;
-
+import lombok.extern.slf4j.Slf4j;
 
 @RestControllerAdvice
+@Slf4j
 public class UserControllerAdvice {
 
 	@ExceptionHandler(UserEmailAlreadyException.class)
 	public ResponseEntity userEmailAlreadyException(HttpServletRequest request) {
+
+		log.info("userEmailAlreadyException");
+
 		return ResponseEntity.status(UserErrorCode.SAME_EMAIL_ALREADY_EXIST.getCode())
 			.body(CommonResponse.builder()
 				.path(request.getRequestURI())
@@ -31,6 +35,9 @@ public class UserControllerAdvice {
 
 	@ExceptionHandler(PasswordNotMatchedException.class)
 	public ResponseEntity passwordNotMatchedException(HttpServletRequest request) {
+
+		log.info("passwordNotMatchedException");
+
 		return ResponseEntity.status(UserErrorCode.PASSWORD_NOT_MATCHED.getCode())
 			.body(CommonResponse.builder()
 				.path(request.getRequestURI())
@@ -42,6 +49,9 @@ public class UserControllerAdvice {
 
 	@ExceptionHandler(NotFountUserException.class)
 	public ResponseEntity notFountUserException(HttpServletRequest request) {
+
+		log.info("notFountUserException");
+
 		return ResponseEntity.status(UserErrorCode.NOT_FOUNT_USER.getCode())
 			.body(CommonResponse.builder()
 				.path(request.getRequestURI())
@@ -53,6 +63,9 @@ public class UserControllerAdvice {
 
 	@ExceptionHandler(NotLoginException.class)
 	public ResponseEntity notLoginException(HttpServletRequest request) {
+
+		log.info("notLoginException");
+
 		return ResponseEntity.status(UserErrorCode.NOT_LOGIN.getCode())
 			.body(CommonResponse.builder()
 				.path(request.getRequestURI())

@@ -52,7 +52,6 @@ public class PostService {
 
 		User user = userRepository.findByEmail(email).orElseThrow(NotFountUserException::new);
 
-		//데이터베이스저장
 		Post post = postCreateRequest.toEntity(user,data.getImg());
 		Post savedPost = postRepository.save(post);
 
@@ -79,14 +78,15 @@ public class PostService {
 		}
 
 		CrawledDataDTO data = crawler.getData(url);
+		String splitedDescription = splitDescriptionLength90(data.getDescription());
 
-		return new PostTempCreateResponse(url,data.getTitle(), data.getDescription(), data.getImg());
+		return new PostTempCreateResponse(url,data.getTitle(), splitedDescription, data.getImg());
 	}
 
 	@Transactional
 	public PostReadResponse read(){
 
-		List<Post> top9ByOrderByIdAsc = postRepository.findTop9ByOrderByIdAsc();
+		List<Post> top9ByOrderByIdAsc = postRepository.findAllByOrderByIdDesc();
 		PostReadResponse postReadResponse = new PostReadResponse(top9ByOrderByIdAsc);
 		// List<PostReadResponse> responseList = new ArrayList<>();
 		// for (Post post : top9ByOrderByIdAsc) {
@@ -94,5 +94,14 @@ public class PostService {
 		// }
 
 		return postReadResponse;
+	}
+
+	private String splitDescriptionLength90(String description) {
+		if(description.length() >= 90) {
+			description = description.substring(0,90) + "...";
+		} else {
+			description = description + "...";
+		}
+		return description;
 	}
 }

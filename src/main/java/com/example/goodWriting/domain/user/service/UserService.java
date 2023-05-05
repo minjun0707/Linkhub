@@ -14,9 +14,11 @@ import com.example.goodWriting.domain.user.exception.UserEmailAlreadyException;
 import com.example.goodWriting.domain.user.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class UserService {
 
 	private final UserRepository userRepository;
@@ -30,6 +32,7 @@ public class UserService {
 
 		//일치하지 않으면
 		if(password.equals(foundUser.getPassword()) == false) {
+			log.info("NotFountUserException");
 			throw new NotFountUserException();
 		}
 
@@ -41,11 +44,13 @@ public class UserService {
 
 		//아이디가 존재하는 지 확인
 		if(userRepository.existsByEmail(userSignUpRequest.getEmail())){
+			log.info("UserEmailAlreadyException");
 			throw new UserEmailAlreadyException();
 		}
 
 		//비멀번호가 서로 일치하는 지 확인
 		if(userSignUpRequest.getPassword().equals(userSignUpRequest.getPasswordCheck()) == false) {
+			log.info("PasswordNotMatchedException");
 			throw new PasswordNotMatchedException();
 		}
 

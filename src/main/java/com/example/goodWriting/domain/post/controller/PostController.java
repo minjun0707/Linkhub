@@ -1,5 +1,6 @@
 package com.example.goodWriting.domain.post.controller;
 
+import java.util.Enumeration;
 import java.util.List;
 
 import org.springframework.http.HttpRequest;
@@ -19,12 +20,15 @@ import com.example.goodWriting.domain.post.service.PostService;
 import com.example.goodWriting.domain.user.domain.User;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequiredArgsConstructor
+@Slf4j
 public class PostController {
 
 	private final PostService postService;
@@ -37,6 +41,7 @@ public class PostController {
 
 		postService.createPost(email,PostCreateRequest);
 
+
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()
 				.path("/api/board/create")
@@ -46,8 +51,14 @@ public class PostController {
 				.build());
 	}
 	@PostMapping("/api/board/create/temp")
-	public ResponseEntity createTemp(@RequestBody @Valid PostTempCreateRequest PostTempCreateRequest) {
+	public ResponseEntity createTemp(@RequestBody @Valid PostTempCreateRequest PostTempCreateRequest,
+		HttpServletResponse response) {
 
+		// response.setHeader("Access-Control-Allow-Origin", "*");
+		// response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
+		// response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type");
+		// response.setHeader("Access-Control-Max-Age", "3600");
+		// response.setHeader("Access-Control-Allow-Credentials", "false");
 
 		PostTempCreateResponse postTempCreateResponse = postService.createTempPost(PostTempCreateRequest);
 

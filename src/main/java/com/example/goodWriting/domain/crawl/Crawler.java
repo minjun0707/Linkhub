@@ -31,7 +31,7 @@ public class Crawler {
 		// 내용
 		String description = doc.select("meta[property=og:description]").attr("content");
 		// 이미지
-		String image = doc.select("meta[property=og:image]").attr("content");
+		String image = doc.select("meta[property=twitter:image]").attr("content");
 
 		//제목이 없는 경우
 		if (title.isEmpty()) {
