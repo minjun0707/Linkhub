@@ -7,6 +7,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.example.goodWriting.domain.crawl.CrawledDataDTO;
@@ -31,7 +32,8 @@ public class CrawlerTest {
 	Crawler crawler = new Crawler();
 
 	@Test
-	void 크롤링() {
+	@DisplayName("입력된 URL에서 이미지,제목,설명을 크롤링한다")
+	void crawlDate() {
 
 		String str ="https://tecoble.techcourse.co.kr/post/2022-11-01-mysql-dead-lock/";
 
@@ -42,25 +44,23 @@ public class CrawlerTest {
 
 		Assertions.assertEquals("데드락 해결 모험기",title );
 		Assertions.assertEquals("용어 설명     Cycle이란, 사용자가 특정 챌린지에 도전할 때 생성되는 객체이다. 비즈니스 규칙 상 하루에 한번씩 총…",description);
-		Assertions.assertEquals("https://static/9a8e208eb938af089c498336dd233cf0/00405/deadlock_teaser.png",img);
+		Assertions.assertEquals("https://tecoble.techcourse.co.kr/static/264a2517af906c5a1c3c22b6f4c181cd/2f1b1/giron.jpg",img);
 
 	}
 
-
-
-
-
 	@Test
-	void isValid_올바른URL() throws IOException {
+	@DisplayName("올바른 URL 접근")
+	void isValidURLTest() throws IOException {
 
-		String validUrl = "https://jddng.tistory.com/safsdfs";
+		String validUrl = "https://jddng.tistory.com";
 
 		Assertions.assertEquals(true, crawler.isValidUrl(validUrl));
 	}
 
 
 	@Test
-	void isValid_잘못된URL() throws IOException {
+	@DisplayName("잘못된 URI 접근")
+	void isNotValidURLTest() throws IOException {
 
 		String validUrl = "https://jddng.tistory.com/safsdfs";
 
@@ -68,7 +68,8 @@ public class CrawlerTest {
 	}
 
 	@Test
-	void isMatchRegex_올바른URL() {
+	@DisplayName("URL regex를 만족한다")
+	void matchRegexURLTest() {
 
 		String validUrl = "https://jddng.tistory.com/dfsd2=";
 
@@ -76,7 +77,8 @@ public class CrawlerTest {
 	}
 
 	@Test
-	void isMatchRegex_잘못된URL() {
+	@DisplayName("URL regex를 만족하지못한다")
+	void notMatchRegexTest() {
 
 		String validUrl = "htts://jddng.tistory.com/dfsd2=";
 
@@ -85,7 +87,8 @@ public class CrawlerTest {
 
 
 	@Test
-	void isHttpResponseOk_올바른URL()  {
+	@DisplayName("HTTP status가 404가 아닌 URL 이다")
+	void validHttpResponse()  {
 
 		String validUrl = "http://jddng.tistory.com/";
 
@@ -98,7 +101,8 @@ public class CrawlerTest {
 
 
 	@Test
-	void isHttpResponseOk_잘못된URL()  {
+	@DisplayName("HTTP status가 404이다")
+	void httpReponse404()  {
 
 		String validUrl = "htㄴㅁㅇㅁ";
 		try {
@@ -110,7 +114,8 @@ public class CrawlerTest {
 	}
 
 	@Test
-	void addHttpsUrl_https가_주소에_있다()  {
+	@DisplayName("https 프로토콜이 url에 존재한다")
+	void haveHttpsProtocolInURL()  {
 
 		String str = "https://google.com";
 		String addedStr = crawler.addHttpsUrl(str);
@@ -118,7 +123,8 @@ public class CrawlerTest {
 	}
 
 	@Test
-	void addHttpsUrl_https가_주소에_없다()  {
+	@DisplayName("https 프로토콜이 url에 존재하지않는다.")
+	void notHttpsProtocolInURL()  {
 
 		String str = "google.com";
 		String addedStr = crawler.addHttpsUrl(str);

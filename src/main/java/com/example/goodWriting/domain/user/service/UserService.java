@@ -25,13 +25,13 @@ public class UserService {
 
 	public User login(UserLoginRequest userLoginRequest) {
 
-		 String email = userLoginRequest.getEmail();
-		 String password = userLoginRequest.getPassword();
+		String email = userLoginRequest.getEmail();
+		String password = userLoginRequest.getPassword();
 
 		User foundUser = userRepository.findByEmail(email).orElseThrow(NotFountUserException::new);
 
 		//일치하지 않으면
-		if(password.equals(foundUser.getPassword()) == false) {
+		if (password.equals(foundUser.getPassword()) == false) {
 			log.info("NotFountUserException");
 			throw new NotFountUserException();
 		}
@@ -39,17 +39,16 @@ public class UserService {
 		return foundUser;
 	}
 
-
 	public User signUp(UserSignUpRequest userSignUpRequest) {
 
 		//아이디가 존재하는 지 확인
-		if(userRepository.existsByEmail(userSignUpRequest.getEmail())){
+		if (userRepository.existsByEmail(userSignUpRequest.getEmail())) {
 			log.info("UserEmailAlreadyException");
 			throw new UserEmailAlreadyException();
 		}
 
 		//비멀번호가 서로 일치하는 지 확인
-		if(userSignUpRequest.getPassword().equals(userSignUpRequest.getPasswordCheck()) == false) {
+		if (userSignUpRequest.getPassword().equals(userSignUpRequest.getPasswordCheck()) == false) {
 			log.info("PasswordNotMatchedException");
 			throw new PasswordNotMatchedException();
 		}

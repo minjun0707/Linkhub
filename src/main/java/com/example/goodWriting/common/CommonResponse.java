@@ -9,7 +9,7 @@ import lombok.Data;
 public class CommonResponse<T> {
 	public String path;
 	public String method;
-	public T data;
+	public T data ;
 	public String message;
 	public HttpStatus statusCode;
 

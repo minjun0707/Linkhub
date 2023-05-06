@@ -54,12 +54,6 @@ public class PostController {
 	public ResponseEntity createTemp(@RequestBody @Valid PostTempCreateRequest PostTempCreateRequest,
 		HttpServletResponse response) {
 
-		// response.setHeader("Access-Control-Allow-Origin", "*");
-		// response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
-		// response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type");
-		// response.setHeader("Access-Control-Max-Age", "3600");
-		// response.setHeader("Access-Control-Allow-Credentials", "false");
-
 		PostTempCreateResponse postTempCreateResponse = postService.createTempPost(PostTempCreateRequest);
 
 		return ResponseEntity.ok()
