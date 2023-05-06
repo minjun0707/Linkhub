@@ -34,7 +34,7 @@ public class PostController {
 	private final PostService postService;
 
 	@PostMapping("/api/board/create")
-	public ResponseEntity create(@RequestBody @ Valid PostCreateRequest PostCreateRequest, HttpServletRequest request) {
+	public ResponseEntity create(@RequestBody @Valid PostCreateRequest PostCreateRequest, HttpServletRequest request) {
 
 		HttpSession session = request.getSession();
 		String email = (String)session.getAttribute("email");
@@ -82,16 +82,5 @@ public class PostController {
 	}
 
 
-	@PostMapping("/api/board/test")
-	public ResponseEntity test(@RequestBody PostCreateRequest PostCreateRequest) {
-
-		return ResponseEntity.ok()
-			.body(CommonResponse.builder()
-				.path("/api/board/create")
-				.method("POST")
-				.message("test")
-				.statusCode(HttpStatus.OK)
-				.build());
-	}
 
 }

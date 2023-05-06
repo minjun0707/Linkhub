@@ -5,55 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4a45ff4-38c7-47e6-a163-ec6203e4d40d" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/common/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/common/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/crawl/CrawledDataDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/crawl/CrawledDataDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/crawl/Crawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/crawl/Crawler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostCreateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostCreateRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostCreateResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostCreateResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostReadListData.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostReadListData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostReadResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostReadResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostTempCreateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostTempCreateRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostTempCreateResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/dto/PostTempCreateResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/repository/PostRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/post/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/exception/UserErrorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/exception/UserErrorCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/CrawlerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/CrawlerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/PostServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/dto/UserLoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/dto/UserLoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/dto/UserSignUpRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/goodWriting/domain/user/dto/UserSignUpRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/UserControllerAdviceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/UserControllerAdviceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/UserControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/UserRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/UserSerivceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/UserServiceExceptionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/goodWriting/domain/user/controller/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.goodWriting.domain.user.controller.test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.goodWriting.CrawlerTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.goodWriting.domain.user.controller.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.goodWriting.domain.user.controller.test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.goodWriting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.goodWriting.CrawlerTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PostController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PostService.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserControllerAdvice.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserErrorCode.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/test.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CrawlerTest.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/common/CommonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/common/CommonResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/common/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/common/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/crawl/CrawledDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/crawl/CrawledDataDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/crawl/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/crawl/Crawler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostCreateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostCreateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostReadListData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostReadListData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostReadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostReadResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostTempCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostTempCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostTempCreateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/dto/PostTempCreateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/repository/PostRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/post/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/exception/UserErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/exception/UserErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/CrawlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/CrawlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/PostServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/dto/UserLoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/dto/UserLoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/dto/UserSignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/user/dto/UserSignUpRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/UserControllerAdviceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/UserControllerAdviceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/UserRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/UserSerivceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/UserServiceExceptionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/dto/UserRequestValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/dto/UserRequestValidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/dto/UserResponseValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/dto/UserResponseValidationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +81,29 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="goodWriting" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="goodWriting" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="goodWriting" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="goodWriting" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -131,13 +161,14 @@
       <recent name="com.example.goodWriting.domain.user.exception" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.goodWriting.domain.post.dto" />
       <recent name="com.example.goodWriting.domain.user.service" />
       <recent name="com.example.goodWriting.domain.user" />
       <recent name="com.example.goodWriting.domain.board.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CrawlerTest">
-    <configuration name="CrawlerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Spring Boot.GoodWritingApplication">
+    <configuration name="CrawlerTest.crawlDate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,7 +181,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.example.goodWriting.CrawlerTest&quot;" />
+            <option value="&quot;com.example.goodWriting.CrawlerTest.crawlDate&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,7 +191,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CrawlerTest.haveHttpsProtocolInURL" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PostServiceTest.postTempCreateSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,76 +204,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.example.goodWriting.CrawlerTest.haveHttpsProtocolInURL&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CrawlerTest.httpReponse404" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.goodWriting.CrawlerTest.httpReponse404&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CrawlerTest.isNotValidURLTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.goodWriting.CrawlerTest.isNotValidURLTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CrawlerTest.notHttpsProtocolInURL" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.goodWriting.CrawlerTest.notHttpsProtocolInURL&quot;" />
+            <option value="&quot;com.example.goodWriting.domain.post.service.PostServiceTest.postTempCreateSuccess&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -275,6 +237,69 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="toy-backend [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="toy-backend [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="toy-backend [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="GoodWritingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="goodWriting.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.goodWriting.GoodWritingApplication" />
@@ -284,11 +309,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CrawlerTest" />
-        <item itemvalue="Gradle.CrawlerTest.haveHttpsProtocolInURL" />
-        <item itemvalue="Gradle.CrawlerTest.notHttpsProtocolInURL" />
-        <item itemvalue="Gradle.CrawlerTest.httpReponse404" />
-        <item itemvalue="Gradle.CrawlerTest.isNotValidURLTest" />
+        <item itemvalue="Gradle.PostServiceTest.postTempCreateSuccess" />
+        <item itemvalue="Gradle.CrawlerTest.crawlDate" />
+        <item itemvalue="Gradle.toy-backend [jacocoTestReport]" />
+        <item itemvalue="Gradle.toy-backend [test]" />
+        <item itemvalue="Gradle.toy-backend [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -309,6 +334,9 @@
       <workItem from="1683282920974" duration="16287000" />
       <workItem from="1683349237230" duration="11740000" />
       <workItem from="1683361220002" duration="7000" />
+      <workItem from="1683361407581" duration="515000" />
+      <workItem from="1683367028821" duration="8262000" />
+      <workItem from="1683378078062" duration="2877000" />
     </task>
     <servers />
   </component>
@@ -349,7 +377,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/user/controller/UserControllerAdviceTest.java</url>
-          <line>42</line>
+          <line>36</line>
           <properties class="com.example.goodWriting.domain.user.controller.UserControllerAdviceTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -382,6 +410,30 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/post/controller/PostControllerAdivceTest.java</url>
+          <line>56</line>
+          <properties class="com.example.goodWriting.domain.post.controller.PostControllerAdivceTest" method="postCreateInvalidUrlException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/example/goodWriting/domain/post/controller/PostControllerAdivceTest.java</url>
+          <line>79</line>
+          <properties class="com.example.goodWriting.domain.post.controller.PostControllerAdivceTest" method="postCreateTempInvalidUrlException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/goodWriting/domain/crawl/CrawledDataDTO.java</url>
+          <line>11</line>
+          <properties field="title" class="com.example.goodWriting.domain.crawl.CrawledDataDTO" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

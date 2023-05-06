@@ -3,9 +3,10 @@ package com.example.goodWriting.domain.post.dto;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import lombok.Data;
 
-@Data
+import lombok.Getter;
+
+@Getter
 public class PostReadListData {
 
 	String title;

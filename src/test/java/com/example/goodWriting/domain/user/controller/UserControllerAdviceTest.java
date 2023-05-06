@@ -2,9 +2,7 @@ package com.example.goodWriting.domain.user.controller;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.*;
-import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -19,17 +17,13 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
-import com.example.goodWriting.common.MethodValidationControllerAdvice;
-import com.example.goodWriting.domain.post.dto.PostTempCreateRequest;
 import com.example.goodWriting.domain.user.LoginInterceptor;
-import com.example.goodWriting.domain.user.domain.User;
 import com.example.goodWriting.domain.user.dto.UserLoginRequest;
 import com.example.goodWriting.domain.user.dto.UserSignUpRequest;
 import com.example.goodWriting.domain.user.exception.NotFountUserException;
 import com.example.goodWriting.domain.user.exception.PasswordNotMatchedException;
 import com.example.goodWriting.domain.user.exception.UserEmailAlreadyException;
 import com.example.goodWriting.domain.user.service.UserService;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @ExtendWith(MockitoExtension.class)

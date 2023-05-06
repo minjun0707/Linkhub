@@ -1,8 +1,9 @@
 package com.example.goodWriting.domain.post.dto;
 
 import lombok.Data;
+import lombok.Getter;
 
-@Data
+@Getter
 public class PostCreateResponse {
 
 	public String name;

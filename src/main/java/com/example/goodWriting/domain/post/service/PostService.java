@@ -34,12 +34,14 @@ public class PostService {
 	private final PostRepository postRepository;
 	private final UserRepository userRepository;
 
+	private final Crawler crawler;
+
 
 	public PostCreateResponse createPost(String email,PostCreateRequest postCreateRequest){
 
 		String url = postCreateRequest.getUrl();
 
-		Crawler crawler = new Crawler();
+		// Crawler crawler = new Crawler();
 
 		//올바르지 못한 url 에러처리
 		try {
@@ -63,8 +65,6 @@ public class PostService {
 	public PostTempCreateResponse createTempPost(PostTempCreateRequest postTempCreateRequest){
 
 		String url = postTempCreateRequest.getUrl();
-
-		Crawler crawler = new Crawler();
 
 		//올바르지 못한 url 에러처리
 		try {

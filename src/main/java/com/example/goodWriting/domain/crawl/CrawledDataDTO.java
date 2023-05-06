@@ -2,9 +2,11 @@ package com.example.goodWriting.domain.crawl;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-@Data
+//@Data
+@Getter
 @AllArgsConstructor
 public class CrawledDataDTO {
 	public String title;

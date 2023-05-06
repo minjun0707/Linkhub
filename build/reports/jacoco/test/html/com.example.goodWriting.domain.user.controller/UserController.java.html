@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">goodWriting</a> &gt; <a href="index.source.html" class="el_package">com.example.goodWriting.domain.user.controller</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package com.example.goodWriting.domain.user.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.goodWriting.common.CommonResponse;
+import com.example.goodWriting.domain.user.domain.User;
+import com.example.goodWriting.domain.user.dto.UserLoginRequest;
+import com.example.goodWriting.domain.user.dto.UserSignUpRequest;
+import com.example.goodWriting.domain.user.service.UserService;
+
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@RestController
+<span class="fc" id="L26">@RequiredArgsConstructor</span>
+<span class="fc" id="L27">@Slf4j</span>
+
+public class UserController {
+
+	private final UserService userService;
+	@PostMapping(&quot;/api/login&quot;)
+	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest, HttpServletRequest request
+		) {
+
+<span class="fc" id="L36">		log.info(userLoginRequest.getEmail());</span>
+<span class="fc" id="L37">		log.info(userLoginRequest.getPassword());</span>
+
+<span class="fc" id="L39">		User user = userService.login(userLoginRequest);</span>
+
+		//세션 생성 후 저장
+<span class="fc" id="L42">		HttpSession session = request.getSession();</span>
+<span class="fc" id="L43">		session.setAttribute(&quot;email&quot;, user.getEmail());</span>
+
+<span class="fc" id="L45">		return ResponseEntity.ok()</span>
+<span class="fc" id="L46">			.body(CommonResponse.builder()</span>
+<span class="fc" id="L47">				.path(&quot;/api/login&quot;)</span>
+<span class="fc" id="L48">				.method(&quot;POST&quot;)</span>
+<span class="fc" id="L49">				.message(&quot;로그인 성공&quot;)</span>
+<span class="fc" id="L50">				.statusCode(HttpStatus.OK)</span>
+<span class="fc" id="L51">				.build());</span>
+	}
+
+	@PostMapping(&quot;/api/sign-up&quot;)
+	public ResponseEntity signUp(@RequestBody @Valid UserSignUpRequest userSignUpRequest,HttpServletRequest request) {
+
+<span class="fc" id="L57">		User user = userService.signUp(userSignUpRequest);</span>
+
+<span class="fc" id="L59">		HttpSession session = request.getSession();</span>
+<span class="fc" id="L60">		session.setAttribute(&quot;email&quot;,user.getEmail());</span>
+
+
+
+<span class="fc" id="L64">		return ResponseEntity.ok()</span>
+<span class="fc" id="L65">			.body(CommonResponse.builder()</span>
+<span class="fc" id="L66">				.path(&quot;/api/sign-up&quot;)</span>
+<span class="fc" id="L67">				.method(&quot;POST&quot;)</span>
+<span class="fc" id="L68">				.message(&quot;회원가입 성공&quot;)</span>
+<span class="fc" id="L69">				.statusCode(HttpStatus.OK)</span>
+<span class="fc" id="L70">				.build());</span>
+	}
+
+	@GetMapping(&quot;/api/logout&quot;)
+	public ResponseEntity logout(HttpServletRequest request) {
+
+<span class="fc" id="L76">		log.info(&quot;logout&quot;);</span>
+
+<span class="fc" id="L78">		HttpSession session = request.getSession();</span>
+<span class="fc" id="L79">		session.invalidate();</span>
+
+<span class="fc" id="L81">		return ResponseEntity.ok()</span>
+<span class="fc" id="L82">			.body(CommonResponse.builder()</span>
+<span class="fc" id="L83">				.path(&quot;/api/logout&quot;)</span>
+<span class="fc" id="L84">				.method(&quot;GET&quot;)</span>
+<span class="fc" id="L85">				.message(&quot;로그아웃 성공&quot;)</span>
+<span class="fc" id="L86">				.statusCode(HttpStatus.OK)</span>
+<span class="fc" id="L87">				.build());</span>
+	}
+
+
+	@GetMapping(&quot;/api/test&quot;)
+	public ResponseEntity test() {
+
+<span class="nc" id="L94">		return ResponseEntity.ok()</span>
+<span class="nc" id="L95">			.body(CommonResponse.builder()</span>
+<span class="nc" id="L96">				.path(&quot;/api/user/test&quot;)</span>
+<span class="nc" id="L97">				.method(&quot;POST&quot;)</span>
+<span class="nc" id="L98">				.message(&quot;로그인 성공&quot;)</span>
+<span class="nc" id="L99">				.statusCode(HttpStatus.OK)</span>
+<span class="nc" id="L100">				.build());</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -6,14 +6,16 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Data
+
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserSignUpRequest {
 
-	@NotBlank(message = "이메일 입력해주세요")
+	@NotBlank(message = "이메일을 입력해주세요")
 	@Pattern(regexp = "^[a-zA-Z0-9+-\\_.]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$" , message = "이메일을 올바르게 입력해주세요.")
 	private String email;
 	@NotBlank(message = "이름을 입력해주세요")
