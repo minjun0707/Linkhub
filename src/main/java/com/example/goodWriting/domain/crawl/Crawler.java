@@ -33,7 +33,7 @@ public class Crawler {
 		// 내용
 		String description = doc.select("meta[property=og:description]").attr("content");
 		// 이미지
-		String image = doc.select("meta[property=twitter:image]").attr("content");
+		String image =  doc.select("meta[name=twitter:image]").attr("content");
 
 		//제목이 없는 경우
 		if (title.isEmpty()) {
@@ -45,21 +45,30 @@ public class Crawler {
 			description = "간단한 설명을 입력해주세요";
 		}
 
-		//이미지가 없는 경우 첫번째 이미지
+		// Elements images = doc.select("img"); // img 태그 선택하기
+		// if (images.size() > 0) {
+		// 	Element firstImage = images.first(); // 첫번째 이미지 선택하기
+		// 	image = firstImage.attr("src"); // 이미지 주소 가져오기
+		// } else {
+		// 	image = "https://www.edology.com/build/images/logo-og.jpg";
+		// }
+
+		// 이미지가 없는 경우 첫번째 이미지
 		if (image.isEmpty()) {
 			Elements images = doc.select("img");
 			for (Element firstImage : images) {
 				String imageUrl = firstImage.attr("abs:src");
 				if (imageUrl != null && !imageUrl.isEmpty()) {
 					image = imageUrl;
+					break;
 				}
 			}
 		}
 
-		//기본이미지
-		if (image.isEmpty()) {
-			image = "https://www.edology.com/build/images/logo-og.jpg";
-		}
+		// //기본이미지
+		// if (image.isEmpty()) {
+		// 	image = "https://www.edology.com/build/images/logo-og.jpg";
+		// }
 
 		return new CrawledDataDTO(title, description, image);
 
