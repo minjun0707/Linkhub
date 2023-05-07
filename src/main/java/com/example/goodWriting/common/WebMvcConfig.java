@@ -11,14 +11,16 @@ import com.example.goodWriting.domain.user.LoginInterceptor;
 public class WebMvcConfig implements WebMvcConfigurer {
 
 
+
+	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		// registry.addInterceptor(new LoginInterceptor())
-		// 	.addPathPatterns("/api/board/create/temp");
+		registry.addInterceptor(new LoginInterceptor())
+			.addPathPatterns("/api/board/create/temp");
 	}
 
 	public void addCorsMappings(final CorsRegistry registry) {
 		registry.addMapping("/**")
-			.allowedOrigins("http://localhost:8080","http://localhost:3000","http://localhost:3003")
+			.allowedOrigins("http://localhost:8080","http://localhost:3004","http://localhost:3003")
 			.allowedMethods("GET", "POST")
 			.allowCredentials(true)
 			.maxAge(3000);

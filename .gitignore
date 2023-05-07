@@ -1,0 +1,25 @@
+# Java class files
+*.class
+
+
+# IntelliJ project files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+
+# Spring Boot Gradle Plugin
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle
+.gradle/
+gradlew
+gradlew.bat
+
+
+
+
+
+
