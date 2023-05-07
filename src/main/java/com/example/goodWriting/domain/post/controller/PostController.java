@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.goodWriting.common.CommonResponse;
 import com.example.goodWriting.domain.post.dto.PostCreateRequest;
+import com.example.goodWriting.domain.post.dto.PostCreateResponse;
 import com.example.goodWriting.domain.post.dto.PostReadResponse;
 import com.example.goodWriting.domain.post.dto.PostTempCreateRequest;
 import com.example.goodWriting.domain.post.dto.PostTempCreateResponse;
@@ -39,8 +40,7 @@ public class PostController {
 		HttpSession session = request.getSession();
 		String email = (String)session.getAttribute("email");
 
-		postService.createPost(email,PostCreateRequest);
-
+		postService.createPost(email, PostCreateRequest);
 
 		return ResponseEntity.ok()
 			.body(CommonResponse.builder()

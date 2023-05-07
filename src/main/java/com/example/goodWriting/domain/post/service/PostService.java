@@ -54,6 +54,9 @@ public class PostService {
 
 		CrawledDataDTO data = crawler.getData(url);
 
+		if(postRepository.existsByUrl(url)){
+			throw new SameUrlAlreadyExist();
+		}
 		User user = userRepository.findByEmail(email).orElseThrow(NotFountUserException::new);
 
 		Post post = postCreateRequest.toEntity(user,data.getImg());

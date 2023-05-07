@@ -87,17 +87,6 @@ public class UserController {
 				.build());
 	}
 
-
-	@GetMapping("/api/test")
-	public ResponseEntity test() {
-
-		return ResponseEntity.ok()
-			.body(CommonResponse.builder()
-				.path("/api/user/test")
-				.method("POST")
-				.message("로그인 성공")
-				.statusCode(HttpStatus.OK)
-				.build());
-	}
+	
 
 }

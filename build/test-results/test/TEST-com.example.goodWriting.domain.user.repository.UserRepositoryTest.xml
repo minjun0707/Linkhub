@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.goodWriting.domain.user.repository.UserRepositoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-06T23:21:16" hostname="gimminjun-ui-MacBookAir.local" time="0.139">
+  <properties/>
+  <testcase name="해당 이메일을 가진 user가 존재한다" classname="com.example.goodWriting.domain.user.repository.UserRepositoryTest" time="0.126"/>
+  <testcase name="해당이메일로 user를 찾는다" classname="com.example.goodWriting.domain.user.repository.UserRepositoryTest" time="0.012"/>
+  <system-out><![CDATA[2023-05-07T08:21:16.763+09:00  INFO 86524 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.goodWriting.domain.user.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-07T08:21:16.778+09:00  INFO 86524 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.goodWriting.GoodWritingApplication for test class com.example.goodWriting.domain.user.repository.UserRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2023-05-07T08:21:16.792+09:00  INFO 86524 --- [    Test worker] c.e.g.d.u.repository.UserRepositoryTest  : Starting UserRepositoryTest using Java 17.0.4 with PID 86524 (started by kimminjun in /Users/kimminjun/Desktop/vue/toy-backend)
+2023-05-07T08:21:16.792+09:00  INFO 86524 --- [    Test worker] c.e.g.d.u.repository.UserRepositoryTest  : No active profile set, falling back to 1 default profile: "default"
+2023-05-07T08:21:16.831+09:00  INFO 86524 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-07T08:21:16.836+09:00  INFO 86524 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-05-07T08:21:16.871+09:00  INFO 86524 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-07T08:21:16.873+09:00  INFO 86524 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-05-07T08:21:16.876+09:00  INFO 86524 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@28442b5c
+2023-05-07T08:21:16.876+09:00  INFO 86524 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-05-07T08:21:16.876+09:00  INFO 86524 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-05-07T08:21:16.876+09:00  WARN 86524 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-07T08:21:16.903+09:00  INFO 86524 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-07T08:21:16.904+09:00  INFO 86524 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-07T08:21:16.951+09:00  INFO 86524 --- [    Test worker] c.e.g.d.u.repository.UserRepositoryTest  : Started UserRepositoryTest in 0.171 seconds (process running for 10.112)
+Hibernate: insert into user (created_at, email, modiified_at, name, password) values (?, ?, ?, ?, ?)
+Hibernate: select u1_0.user_id from user u1_0 where u1_0.email=? limit ?
+Hibernate: insert into user (created_at, email, modiified_at, name, password) values (?, ?, ?, ?, ?)
+Hibernate: select u1_0.user_id,u1_0.created_at,u1_0.email,u1_0.modiified_at,u1_0.name,u1_0.password from user u1_0 where u1_0.email=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

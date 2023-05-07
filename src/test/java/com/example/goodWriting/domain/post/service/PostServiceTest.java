@@ -56,6 +56,7 @@ public class PostServiceTest {
 	void postCreateSameUrlAlreadyExistException() throws IOException {
 		// given
 		PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
+		given(crawler.isValidUrl(any())).willReturn(true);
 		given(postRepository.existsByUrl(any())).willReturn(true);
 
 		//when then

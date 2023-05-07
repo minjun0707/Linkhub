@@ -12,8 +12,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new LoginInterceptor())
-			.addPathPatterns("/api/board/create/temp");
+		// registry.addInterceptor(new LoginInterceptor())
+		// 	.addPathPatterns("/api/board/create/temp");
 	}
 
 	public void addCorsMappings(final CorsRegistry registry) {
