@@ -3,22 +3,22 @@
 
 - # 배포가 진행중 입니다!
 
-- ## 프로젝트 개요
+- ## :truck:    프로젝트 개요
 
   - `Linkhub`는 인터넷의 유용한 글들을 url만 입력하면 게시글로 저장을 해주는 웹 서비스 입니다.
   - 공부하면서 유익한 글들을 개인적으로 스크랩 해놓은 경우가 많습니다. 혼자만 보기 아쉽기도 하고 여러 사람들과 공유하면서 공유도 받고 싶어 제작했습니다.
   - 좋은 글들을 서로 공유합시다
 
-- ## 기술스택
+- ## :truck: 기술스택
    #### [Back-end]
-  <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">  &nbsp  <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
+  <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">  <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
   
    #### [front-end]
 
-  <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">  &nbsp  <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+  <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">  <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
 
 
-- ## 주요기능
+- ## :truck: 주요기능 
   **로그인 / 회원가입 / 로그아웃**
 
     > 1) 로그인 / 회원가입 / 로그아웃이 가능합니다.
@@ -36,7 +36,7 @@
     >
     > 4) 클릭 버튼을 통해 URL에 접속합니다..   
 
-- ## 향후 계획
+- ## :truck: 향후 계획
 
 - **배포** : 배포가 진행중입니다.
 - **게시글 삭제** : 마음에 들지 않는 게시글을 삭제. 단 본인 글만.
@@ -46,7 +46,7 @@
 - **정렬** : 좋아요와 조회수에 따른 게시글 정렬
 - **댓글** : 게시글 댓글
 
-## 🎞 서비스 소개
+## 🎞 :truck: 서비스 소개
 
 ### 1. 메인 화면
 
