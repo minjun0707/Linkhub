@@ -87,6 +87,13 @@ public class UserController {
 				.build());
 	}
 
+	@GetMapping("/api/test")
+	public String test() {
+		return "테스트 성공!!";
+	}
+
+
+
 	
 
 }

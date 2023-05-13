@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.goodWriting.domain.post.controller.PostControllerAdivceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-05-19T03:07:16" hostname="gimminjun-ui-MacBookAir.local" time="0.234">
+  <properties/>
+  <testcase name="이미 존재하는 url" classname="com.example.goodWriting.domain.post.controller.PostControllerAdivceTest" time="0.215"/>
+  <testcase name="유효하지 못한 URL" classname="com.example.goodWriting.domain.post.controller.PostControllerAdivceTest" time="0.008"/>
+  <testcase name="유효하지 못한 URL" classname="com.example.goodWriting.domain.post.controller.PostControllerAdivceTest" time="0.01"/>
+  <system-out><![CDATA[2023-05-19T12:07:16.081+09:00  INFO 95821 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-19T12:07:16.081+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-19T12:07:16.082+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-19T12:07:16.249+09:00  INFO 95821 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-19T12:07:16.249+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-19T12:07:16.249+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-19T12:07:16.257+09:00  INFO 95821 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-19T12:07:16.258+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-19T12:07:16.258+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

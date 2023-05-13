@@ -8,15 +8,12 @@
 *.iws
 *.ipr
 
+#application.yml
 
-# Spring Boot Gradle Plugin
-build/
-!gradle/wrapper/gradle-wrapper.jar
+.gradle
+build
 
-# Gradle
-.gradle/
-gradlew
-gradlew.bat
+
 
 
 

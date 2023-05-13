@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.goodWriting.domain.post.dto.PostCreateRequestValidationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-05-19T03:07:16" hostname="gimminjun-ui-MacBookAir.local" time="0.066">
+  <properties/>
+  <testcase name="내용 미입력" classname="com.example.goodWriting.domain.post.dto.PostCreateRequestValidationTest" time="0.058"/>
+  <testcase name="제목 미입력" classname="com.example.goodWriting.domain.post.dto.PostCreateRequestValidationTest" time="0.001"/>
+  <testcase name="URL 미입력" classname="com.example.goodWriting.domain.post.dto.PostCreateRequestValidationTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -18,9 +18,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 			.addPathPatterns("/api/board/create/temp");
 	}
 
+	//쿠키 허용 allowCredentials
+	//allowCredentials 사용시  allowedOrigins 사용불가 따라서 allowedOriginPatterns 사용
 	public void addCorsMappings(final CorsRegistry registry) {
 		registry.addMapping("/**")
-			.allowedOrigins("http://localhost:8080","http://localhost:3004","http://localhost:3003")
+			.allowedOriginPatterns("*")
 			.allowedMethods("GET", "POST")
 			.allowCredentials(true)
 			.maxAge(3000);

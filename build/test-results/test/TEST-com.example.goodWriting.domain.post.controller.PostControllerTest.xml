@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.goodWriting.domain.post.controller.PostControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-19T03:07:16" hostname="gimminjun-ui-MacBookAir.local" time="0.026">
+  <properties/>
+  <testcase name="POST 생성" classname="com.example.goodWriting.domain.post.controller.PostControllerTest" time="0.011"/>
+  <testcase name="POST 임시 생성" classname="com.example.goodWriting.domain.post.controller.PostControllerTest" time="0.015"/>
+  <system-out><![CDATA[2023-05-19T12:07:16.270+09:00  INFO 95821 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-19T12:07:16.271+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-19T12:07:16.271+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-19T12:07:16.280+09:00  INFO 95821 --- [    Test worker] o.s.mock.web.MockServletContext          : Initializing Spring TestDispatcherServlet ''
+2023-05-19T12:07:16.280+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-19T12:07:16.280+09:00  INFO 95821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
