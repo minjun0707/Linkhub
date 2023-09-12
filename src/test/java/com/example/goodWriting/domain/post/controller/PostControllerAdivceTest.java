@@ -7,6 +7,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -31,6 +33,7 @@ import com.example.goodWriting.domain.user.controller.UserController;
 import com.example.goodWriting.domain.user.controller.UserControllerAdvice;
 import com.example.goodWriting.domain.user.domain.User;
 import com.example.goodWriting.domain.user.dto.UserSignUpRequest;
+import com.example.goodWriting.domain.user.repository.UserRepository;
 import com.example.goodWriting.domain.user.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 @ExtendWith(MockitoExtension.class)
@@ -38,6 +41,8 @@ public class PostControllerAdivceTest {
 
 	@InjectMocks
 	PostController postController;
+	@Mock
+	UserRepository userRepository;
 	@Mock
 	PostService postService;
 	MockMvc mockMvc;
@@ -83,6 +88,9 @@ public class PostControllerAdivceTest {
 		PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
 		given(postService.createTempPost(any())).willThrow(InvalidUrlException.class);
 
+		User user = new User("23","23","23");
+		given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
+
 		//when //then
 		mockMvc.perform(
 				post("/api/board/create/temp")
@@ -103,6 +111,9 @@ public class PostControllerAdivceTest {
 		//given
 		PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
 		given(postService.createTempPost(any())).willThrow(SameUrlAlreadyExist.class);
+
+		User user = new User("23","23","23");
+		given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
 
 		//when //then
 		mockMvc.perform(

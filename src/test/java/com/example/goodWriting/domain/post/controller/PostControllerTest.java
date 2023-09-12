@@ -6,6 +6,8 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,11 +23,13 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import com.example.goodWriting.domain.post.dto.PostCreateRequest;
 import com.example.goodWriting.domain.post.dto.PostTempCreateRequest;
 import com.example.goodWriting.domain.post.dto.PostTempCreateResponse;
+import com.example.goodWriting.domain.post.repository.PostRepository;
 import com.example.goodWriting.domain.post.service.PostService;
 import com.example.goodWriting.domain.user.controller.UserController;
 import com.example.goodWriting.domain.user.domain.User;
 import com.example.goodWriting.domain.user.dto.UserLoginRequest;
 import com.example.goodWriting.domain.user.dto.UserSignUpRequest;
+import com.example.goodWriting.domain.user.repository.UserRepository;
 import com.example.goodWriting.domain.user.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -36,6 +40,9 @@ public class PostControllerTest {
 
 	@Mock
 	PostService postService;
+
+	@Mock
+	UserRepository userRepository;
 
 	// MockHttpSession session;
 	MockMvc mockMvc;
@@ -80,11 +87,14 @@ public class PostControllerTest {
 	@DisplayName("POST 임시 생성")
 	void createTemp() throws Exception {
 
+		User user = new User("23","23","23");
+
 		//given
 		PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
 		PostTempCreateResponse postTempCreateResponse = new PostTempCreateResponse("google.com","title","description","img");
 		String body = objectMapper.writeValueAsString(postTempCreateRequest);
 		given(postService.createTempPost(any())).willReturn(postTempCreateResponse);
+		given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
 
 		//when //then
 		mockMvc.perform(
