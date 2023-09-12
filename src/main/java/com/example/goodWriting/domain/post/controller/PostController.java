@@ -39,7 +39,6 @@ public class PostController {
 	private final UserRepository userRepository;
 
 	@PostMapping("/api/board/create")
-	@CrossOrigin("*")
 	public ResponseEntity create(@RequestBody @Valid PostCreateRequest PostCreateRequest, HttpServletRequest request) {
 
 		HttpSession session = request.getSession();
@@ -56,7 +55,6 @@ public class PostController {
 				.build());
 	}
 	@PostMapping("/api/board/create/temp")
-	@CrossOrigin("*")
 	public ResponseEntity createTemp(@RequestBody @Valid PostTempCreateRequest PostTempCreateRequest,
 		HttpServletResponse response,HttpServletRequest request) {
 
@@ -77,7 +75,6 @@ public class PostController {
 	}
 
 	@GetMapping("/api/board/read")
-	@CrossOrigin("*")
 	public ResponseEntity readBoard() {
 
 		PostReadResponse postReadResponse = postService.read();
