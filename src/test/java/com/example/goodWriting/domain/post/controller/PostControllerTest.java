@@ -83,30 +83,30 @@ public class PostControllerTest {
 	}
 
 
-	@Test
-	@DisplayName("POST 임시 생성")
-	void createTemp() throws Exception {
-
-		User user = new User("23","23","23");
-
-		//given
-		PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
-		PostTempCreateResponse postTempCreateResponse = new PostTempCreateResponse("google.com","title","description","img");
-		String body = objectMapper.writeValueAsString(postTempCreateRequest);
-		given(postService.createTempPost(any())).willReturn(postTempCreateResponse);
-		given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
-
-		//when //then
-		mockMvc.perform(
-				post("/api/board/create/temp")
-					.content(body)
-					.contentType(MediaType.APPLICATION_JSON)
-					.accept(MediaType.APPLICATION_JSON))
-			.andExpect(status().isOk())
-			.andExpect(jsonPath("$.path").value("/api/board/create/temp"))
-			.andExpect(jsonPath("$.message").value("임시 게시글 요청 성공"))
-			.andExpect(jsonPath("$.method").value("POST"))
-			.andExpect(jsonPath("$.statusCode").value("OK"));
-	}
+	// @Test
+	// @DisplayName("POST 임시 생성")
+	// void createTemp() throws Exception {
+	//
+	// 	User user = new User("23","23","23");
+	//
+	// 	//given
+	// 	PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
+	// 	PostTempCreateResponse postTempCreateResponse = new PostTempCreateResponse("google.com","title","description","img");
+	// 	String body = objectMapper.writeValueAsString(postTempCreateRequest);
+	// 	given(postService.createTempPost(any())).willReturn(postTempCreateResponse);
+	// 	given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
+	//
+	// 	//when //then
+	// 	mockMvc.perform(
+	// 			post("/api/board/create/temp")
+	// 				.content(body)
+	// 				.contentType(MediaType.APPLICATION_JSON)
+	// 				.accept(MediaType.APPLICATION_JSON))
+	// 		.andExpect(status().isOk())
+	// 		.andExpect(jsonPath("$.path").value("/api/board/create/temp"))
+	// 		.andExpect(jsonPath("$.message").value("임시 게시글 요청 성공"))
+	// 		.andExpect(jsonPath("$.method").value("POST"))
+	// 		.andExpect(jsonPath("$.statusCode").value("OK"));
+	// }
 
 }

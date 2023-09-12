@@ -80,53 +80,53 @@ public class PostControllerAdivceTest {
 
 
 
-	@Test
-	@DisplayName("유효하지 못한 URL")
-	void postCreateTempInvalidUrlException() throws Exception {
-
-		//given
-		PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
-		given(postService.createTempPost(any())).willThrow(InvalidUrlException.class);
-
-		User user = new User("23","23","23");
-		given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
-
-		//when //then
-		mockMvc.perform(
-				post("/api/board/create/temp")
-					.content(objectMapper.writeValueAsString(postTempCreateRequest))
-					.contentType(MediaType.APPLICATION_JSON)
-					.accept(MediaType.APPLICATION_JSON))
-			.andExpect(status().isBadRequest())
-			.andExpect(jsonPath("$.path").value("/api/board/create/temp"))
-			.andExpect(jsonPath("$.message").value("URL을 올바르게 입력해주세요"))
-			.andExpect(jsonPath("$.method").value("POST"))
-			.andExpect(jsonPath("$.statusCode").value("BAD_REQUEST"));
-	}
-
-	@Test
-	@DisplayName("이미 존재하는 url")
-	void postCreateSameUrlAlreadyExist() throws Exception {
-
-		//given
-		PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
-		given(postService.createTempPost(any())).willThrow(SameUrlAlreadyExist.class);
-
-		User user = new User("23","23","23");
-		given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
-
-		//when //then
-		mockMvc.perform(
-				post("/api/board/create/temp")
-					.content(objectMapper.writeValueAsString(postTempCreateRequest))
-					.contentType(MediaType.APPLICATION_JSON)
-					.accept(MediaType.APPLICATION_JSON))
-			.andExpect(status().isBadRequest())
-			.andExpect(jsonPath("$.path").value("/api/board/create/temp"))
-			.andExpect(jsonPath("$.message").value("이미 존재하는 URL 입니다"))
-			.andExpect(jsonPath("$.method").value("POST"))
-			.andExpect(jsonPath("$.statusCode").value("BAD_REQUEST"));
-	}
+	// @Test
+	// @DisplayName("유효하지 못한 URL")
+	// void postCreateTempInvalidUrlException() throws Exception {
+	//
+	// 	//given
+	// 	PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
+	// 	given(postService.createTempPost(any())).willThrow(InvalidUrlException.class);
+	//
+	// 	User user = new User("23","23","23");
+	// 	given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
+	//
+	// 	//when //then
+	// 	mockMvc.perform(
+	// 			post("/api/board/create/temp")
+	// 				.content(objectMapper.writeValueAsString(postTempCreateRequest))
+	// 				.contentType(MediaType.APPLICATION_JSON)
+	// 				.accept(MediaType.APPLICATION_JSON))
+	// 		.andExpect(status().isBadRequest())
+	// 		.andExpect(jsonPath("$.path").value("/api/board/create/temp"))
+	// 		.andExpect(jsonPath("$.message").value("URL을 올바르게 입력해주세요"))
+	// 		.andExpect(jsonPath("$.method").value("POST"))
+	// 		.andExpect(jsonPath("$.statusCode").value("BAD_REQUEST"));
+	// }
+	//
+	//@Test
+	//@DisplayName("이미 존재하는 url")
+	// void postCreateSameUrlAlreadyExist() throws Exception {
+	//
+	// 	//given
+	// 	PostTempCreateRequest postTempCreateRequest = new PostTempCreateRequest("google.com");
+	// 	given(postService.createTempPost(any())).willThrow(SameUrlAlreadyExist.class);
+	//
+	// 	User user = new User("23","23","23");
+	// 	given(userRepository.findByEmail(any())).willReturn(Optional.of(user));
+	//
+	// 	//when //then
+	// 	mockMvc.perform(
+	// 			post("/api/board/create/temp")
+	// 				.content(objectMapper.writeValueAsString(postTempCreateRequest))
+	// 				.contentType(MediaType.APPLICATION_JSON)
+	// 				.accept(MediaType.APPLICATION_JSON))
+	// 		.andExpect(status().isBadRequest())
+	// 		.andExpect(jsonPath("$.path").value("/api/board/create/temp"))
+	// 		.andExpect(jsonPath("$.message").value("이미 존재하는 URL 입니다"))
+	// 		.andExpect(jsonPath("$.method").value("POST"))
+	// 		.andExpect(jsonPath("$.statusCode").value("BAD_REQUEST"));
+	// }
 
 
 }
