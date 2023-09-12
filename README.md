@@ -1,10 +1,8 @@
 
 # Linkhub <img src="https://cdn-icons-png.flaticon.com/512/870/870143.png" width="60" height="60"/>
-
-  <br>
-
-  <br>
-  <br>
+- ## &nbsp; :truck:    &nbsp; &nbsp; 홈페이지 주소
+  - www.linkhub.life
+<br>
 
 - ## &nbsp; :truck:    &nbsp; &nbsp; 프로젝트 개요
 
@@ -18,14 +16,19 @@
 
 - ## &nbsp; :truck:    &nbsp; &nbsp; 기술스택
    #### [Back-end]
-  <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">  <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
+  <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">   <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
   
   
    #### [front-end]
 
   <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">  <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+
 <br>
  <br>
+
+ - ## &nbsp; :truck:    &nbsp; &nbsp; 아키텍처
+   <img width="850" alt="image" src="https://github.com/minjun0707/Linkhub/assets/75360915/ceb185d7-b563-40a3-b5b2-e790fd8d583f">
+
 
 - ## &nbsp; :truck:    &nbsp; &nbsp; 주요기능 
   **로그인 / 회원가입 / 로그아웃**
@@ -37,27 +40,20 @@
 
   **URL 등록 / 게시글 임시 저장 / 게시글 등록**
 
-    > 1) 등록하고 싶은 글의 URL을 입력해 주세요. 형식은 (google.com https://google.com)을 준수해주세요.
+    > 1) 등록하고 싶은 글의 URL을 입력해 주세요. 형식은 (google.com, https://google.com) 을 준수해주세요.
     >
-    > 2) 저장하고 싶은 글의 썸네일, 제목 , 설명을 확인합니다.
+    > 2) 저장하고 싶은 글의 썸네일, 제목 ,설명을 확인합니다.
+    > 
+    > 3) 썸네일, 제목 ,설명을 수정할 수 있어요!
     >
-    > 3) 마음에 들지 않으면 취소, 마음에 들면 저장 버튼을 눌러 게시글을 등록합니다!
+    > 4) 마음에 들지 않으면 취소, 마음에 들면 저장 버튼을 눌러 게시글을 등록합니다!
     >
-    > 4) 클릭 버튼을 통해 URL에 접속합니다..  
+    > 5) 클릭 버튼을 통해 URL에 접속합니다..  
     >  
 
 <br>
  <br>
  
- ## &nbsp; :truck:    &nbsp; &nbsp; 향후 계획
-
-- **배포** : 배포가 진행중입니다.
-- **게시글 삭제** : 마음에 들지 않는 게시글을 삭제. 단 본인 글만.
-- **게시글 수정** : 썸네일 , 제목 , 내용이 마음에 들지 않으면 수정.
-- **좋아요** : 게시글에 좋아요
-- **조회수** : 게시글 조회수
-- **정렬** : 좋아요와 조회수에 따른 게시글 정렬
-- **댓글** : 게시글 댓글
 
 <br>
  <br>
@@ -69,7 +65,6 @@
 ### 1. 메인 화면
 
 <img width="1061" alt="image" src="https://user-images.githubusercontent.com/75360915/236668021-15f08849-4926-40a3-8066-6b158dc593bb.png">
----
 
 ### 2. 회원가입
 
@@ -78,7 +73,6 @@
 #### 2-1. 회원 가입 성공
 
 ![img_1.png](img/img_1.png)
----
 
 ### 3. 로그인 화면
 
