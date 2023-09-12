@@ -1,17 +1,17 @@
 spring:
   datasource:
-#    url: jdbc:mysql://linkhub-database.cl7nmynii0zx.ap-northeast-2.rds.amazonaws.com:3306/linkhub-database?allowPublicKeyRetrieval=true&useSSL=false
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    username: admin
-#    password: alswns123
+    url: jdbc:mysql://linkhub-database.cl7nmynii0zx.ap-northeast-2.rds.amazonaws.com:3306/linkhub-database?allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: admin
+    password: alswns123
 
       #배포
-    url: jdbc:mysql://localhost:3306/linkhub?allowPublicKeyRetrieval=true&useSSL=false
+#    url: jdbc:mysql://localhost:3306/linkhub?allowPublicKeyRetrieval=true&useSSL=false
      #로컬
 #    url: jdbc:mysql://52.78.142.214:3306/linkhub?allowPublicKeyRetrieval=true&useSSL=false
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: minjun
-    password: 1234
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: minjun
+#    password: 1234
 
 
 
