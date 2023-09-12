@@ -58,7 +58,7 @@ public class PostController {
 	public ResponseEntity createTemp(@RequestBody @Valid PostTempCreateRequest PostTempCreateRequest,
 		HttpServletResponse response,HttpServletRequest request) {
 
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(false);
 		String email = (String)session.getAttribute("email");
 		User user = userRepository.findByEmail(email).orElseThrow(NotFountUserException::new);
 
