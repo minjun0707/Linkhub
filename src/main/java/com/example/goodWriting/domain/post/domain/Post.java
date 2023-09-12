@@ -29,6 +29,7 @@ public class Post extends EntityDate {
 	@JoinColumn(name = "user_id")
 	private User user;
 
+	@Column(length = 50000)
 	private String url;
 	private String img;
 	private String title;

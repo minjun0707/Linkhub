@@ -10,5 +10,4 @@ public class GoodWritingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GoodWritingApplication.class, args);
 	}
-
 }

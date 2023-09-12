@@ -19,6 +19,8 @@ import com.example.goodWriting.domain.post.dto.PostTempCreateRequest;
 import com.example.goodWriting.domain.post.dto.PostTempCreateResponse;
 import com.example.goodWriting.domain.post.service.PostService;
 import com.example.goodWriting.domain.user.domain.User;
+import com.example.goodWriting.domain.user.exception.NotFountUserException;
+import com.example.goodWriting.domain.user.repository.UserRepository;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -33,6 +35,7 @@ import lombok.extern.slf4j.Slf4j;
 public class PostController {
 
 	private final PostService postService;
+	private final UserRepository userRepository;
 
 	@PostMapping("/api/board/create")
 	public ResponseEntity create(@RequestBody @Valid PostCreateRequest PostCreateRequest, HttpServletRequest request) {
@@ -52,7 +55,11 @@ public class PostController {
 	}
 	@PostMapping("/api/board/create/temp")
 	public ResponseEntity createTemp(@RequestBody @Valid PostTempCreateRequest PostTempCreateRequest,
-		HttpServletResponse response) {
+		HttpServletResponse response,HttpServletRequest request) {
+
+		HttpSession session = request.getSession();
+		String email = (String)session.getAttribute("email");
+		User user = userRepository.findByEmail(email).orElseThrow(NotFountUserException::new);
 
 		PostTempCreateResponse postTempCreateResponse = postService.createTempPost(PostTempCreateRequest);
 
