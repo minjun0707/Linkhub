@@ -2,7 +2,6 @@
 # Linkhub <img src="https://cdn-icons-png.flaticon.com/512/870/870143.png" width="60" height="60"/>
 
   <br>
-배포가 진행중 입니다!
 
   <br>
   <br>
@@ -74,41 +73,41 @@
 
 ### 2. 회원가입
 
-![img.png](img.png)
+![img.png](img/img.png)
 
 #### 2-1. 회원 가입 성공
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 ---
 
 ### 3. 로그인 화면
 
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 
 #### 3-1. 로그인 성공
 
-![img_4.png](img_4.png)
+![img_4.png](img/img_4.png)
 
 
 ---
 
 ### 4. 게시글 등록
-![img_6.png](img_6.png)
+![img_6.png](img/img_6.png)
 
 #### 4-1. 게시글 미리보기
 
-![img_7.png](img_7.png)
+![img_7.png](img/img_7.png)
 
 #### 4-2. 게시글 등록 성공
 
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 #### 4-3. 갱신된 페이지
 
-![img_9.png](img_9.png)
+![img_9.png](img/img_9.png)
 
 ---
 
 ### 5. 게시글 정보
 
-![img_10.png](img_10.png)
+![img_10.png](img/img_10.png)
