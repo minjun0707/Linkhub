@@ -30,6 +30,7 @@ public class UserController {
 
 	private final UserService userService;
 	@PostMapping("/api/login")
+	@CrossOrigin("*")
 	public ResponseEntity login(@RequestBody @Valid UserLoginRequest userLoginRequest, HttpServletRequest request
 		) {
 
@@ -52,6 +53,7 @@ public class UserController {
 	}
 
 	@PostMapping("/api/sign-up")
+	@CrossOrigin("*")
 	public ResponseEntity signUp(@RequestBody @Valid UserSignUpRequest userSignUpRequest,HttpServletRequest request) {
 
 		User user = userService.signUp(userSignUpRequest);
@@ -71,6 +73,7 @@ public class UserController {
 	}
 
 	@GetMapping("/api/logout")
+	@CrossOrigin("*")
 	public ResponseEntity logout(HttpServletRequest request) {
 
 		log.info("logout");

@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,6 +39,7 @@ public class PostController {
 	private final UserRepository userRepository;
 
 	@PostMapping("/api/board/create")
+	@CrossOrigin("*")
 	public ResponseEntity create(@RequestBody @Valid PostCreateRequest PostCreateRequest, HttpServletRequest request) {
 
 		HttpSession session = request.getSession();
@@ -54,6 +56,7 @@ public class PostController {
 				.build());
 	}
 	@PostMapping("/api/board/create/temp")
+	@CrossOrigin("*")
 	public ResponseEntity createTemp(@RequestBody @Valid PostTempCreateRequest PostTempCreateRequest,
 		HttpServletResponse response,HttpServletRequest request) {
 
@@ -74,6 +77,7 @@ public class PostController {
 	}
 
 	@GetMapping("/api/board/read")
+	@CrossOrigin("*")
 	public ResponseEntity readBoard() {
 
 		PostReadResponse postReadResponse = postService.read();
