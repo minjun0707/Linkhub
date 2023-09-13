@@ -26,9 +26,10 @@ spring:
 server:
   servlet:
     session:
-      cookie:
-        same-site:"none"
       timeout: 1800
+      same-site: "none"
 
+
+              
 
 
