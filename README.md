@@ -1,8 +1,6 @@
 
 # Linkhub <img src="https://cdn-icons-png.flaticon.com/512/870/870143.png" width="60" height="60"/>
-- ## &nbsp; :truck:    &nbsp; &nbsp; 홈페이지 주소
-  - www.linkhub.life
-<br>
+
 
 - ## &nbsp; :truck:    &nbsp; &nbsp; 프로젝트 개요
 
